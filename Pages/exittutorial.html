@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BOX | An Interactive Narrative</title>
+	<style type="text/css">
+		*{
+			background-color: #101010;
+			font-size: 25px;
+			color: white;
+			width: 500px;
+		}
+		
+		.Max{
+			font-family: "Andale Mono";
+			padding: 20px;
+			
+		}
+		
+		.Julia{
+			font-family: "Courier New";
+			padding: 10px;
+			position: relative;
+			left: 900px;
+			float: left;
+			
+			
+		}
+		.Julia:hover{
+			animation-name: pulse;
+			animation-duration: 1s;
+			animation-direction: alternate;
+			animation-iteration-count: infinite;
+			cursor: pointer;
+		}
+		
+		.tutorial{
+			font-family: "monospace";
+			height: 40%;
+			width: 80%;
+			position: relative;
+			left: 450px;
+		}
+		
+		#icon{
+			height: 50px;
+			width: 50px;
+		}
+		
+		@keyframes pulse{
+			from{border-color: white;}
+			to{border-color: #A2A0A0;}
+		}
+		
+		
+		#exchange1{
+			display: none;
+		}
+		
+		#exchange2{display: none;}
+		
+		
+	</style>
+</head>
+
+<body>
+		<p class="Max">What do you need?</p> <br/> <br/>
+	<div class="choice" style="width: 100%">
+		<button class="Julia" style="width: 50%" onClick="show()"> I have no idea what I'm doing.</button>
+	</div>
+	<div class="choice2" style="width=100%">
+	<button class="Julia" style="width: 50%" onClick="show2()">Need a break. Cover for me?</button>
+		</div>
+	
+	<div id="exchange1">
+		<p class="Max">Yeah, your dad had that effect.</p>
+		<div class="tutorial">
+			<p>BOX is an interactive narrative designed for free play. Explore the evidence in whatever order you choose by clicking on the items in the box. Scroll through notes, photos, interviews, and diary entries to figure out how your dad solved the case.<br/>
+			Toggle the monocle icon <img src="../Assets/Pictures/monocleoff.png" id="icon"> on the left to view your father's notes.<br/><br/>
+			To exit the game, tell Max you need a break. To finish, click the "I'm done" button to the right of the box.</p>
+		</div>
+	</div>
+		
+	<div id="exchange2">
+		
+		<p class="Max"><br/>Really? Man, you <i>are</i> the second coming of Jules Jordan. <br/> All right, I got you. Hurry back.</p>
+		<button class="Julia" onClick="document.location='index.html'">Might be a while...</button>
+		</div> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<button class="Julia" onClick="document.location = 'main game.html'">Thanks, Max. Back to it...</button>
+	
+	
+<script> 
+		function show() {
+  var x = document.getElementById("exchange1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+}
+	function show2() {
+  var x = document.getElementById("exchange2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+}
+	</script>
+		
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BOX | An Interactive Narrative</title>
+	<style type="text/css">
+		*{
+			background-color: #101010;
+			font-size: 25px;
+			color: white;
+			width: 500px;
+		}
+		
+		.Max{
+			font-family: "Andale Mono";
+			padding: 20px;
+			
+		}
+		
+		.Julia{
+			font-family: "Courier New";
+			padding: 10px;
+			position: relative;
+			left: 900px;
+			
+		}
+		.Julia:hover{
+			animation-name: pulse;
+			animation-duration: 1s;
+			animation-direction: alternate;
+			animation-iteration-count: infinite;
+			cursor: pointer;
+		}
+		
+		@keyframes pulse{
+			from{border-color: white;}
+			to{border-color: #A2A0A0;}
+		}
+		
+		#thought{
+			font-family: "Courier New";
+			padding: 10px;
+			position: relative;
+			left: 900px;
+		}
+		
+		#exchange1{
+			display: none;
+		}
+		
+		#exchange3{
+			display: none;
+		}
+		
+		#exchange2{display: none;}
+		
+		
+	</style>
+</head>
+
+<body>
+		<p class="Max">Sorry to call you in like this, Julia.</p> <br/> <br/>
+		
+<button class="Julia" onClick="show()"> It's Jules, Max.</button> <br/> <br/> <br/>
+		
+	<div id="exchange1"><p class="Max">Jules. Sorry. <br/> Christ, you're like a ghost. You know why we're here?</p> <br/> <br/>
+	<button class="Julia" onClick="show2()">No, and I'll take that <br/> as a compliment.</button> <br/> <br/>
+		</div>
+	
+	
+	<div id="exchange2"><p class="Max" id="statement2">Funny. Aaron Dern is going for appeal. We're trying to  
+					keep him locked up, but your dad kept all the case files
+			in a hellscape of bad organization.<br/><br/>
+			And no one can read his fucking handwriting. </p> <br/> <br/>
+		
+	<p id="thought"> <i>(It's true. His handwriting was terrible. Guess that's why he loved his monocle so much--<br/>
+				  only way you can read it.) </i> </p>
+		
+	<button class="Julia" onClick="show3()">So you want me to, what? <br/>Figure out how he got the most notorious criminal
+						of our lifetime locked up?</button> </div>
+		
+	<div id="exchange3"><p class="Max" id="statement3">Yeah. And you got twenty minutes.
+			<br/>That's all I can give you without tipping off some annoying people. <br/>
+		Good luck, Jules.</p> <br/> <br/><br/> <br/>
+	
+	<button class="Julia" onClick="document.location = 'main game.html'">Well, here goes...</button><br/><br/> <br/></div>
+	
+	
+	
+<script> 
+		function show() {
+  var x = document.getElementById("exchange1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+}
+	function show2() {
+  var x = document.getElementById("exchange2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+}
+	function show3() {
+  var x = document.getElementById("exchange3");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+}
+	</script>
+		
+</body>
+</html>

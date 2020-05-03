@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+	<style type="text/css">
+		
+	*{
+			background-color: #101010;
+			color: #E5E5E5;
+			font-family: 'Courier';
+			
+		}
+		.carlitem{
+			width: 50%;
+			height: 100%;
+			position: relative;
+			top: 0px;
+			left: auto;
+			margin: 40px;
+		
+		}
+		
+		.date{
+			font-size: 50px;
+			margin: 40px;
+			
+		}
+		
+		.carl, .carldet{margin: 40px;}
+		
+		.backbutton{
+			font-size: 30px;
+			padding: 20px;
+			margin: 40px;
+			cursor: pointer;
+			
+		}
+		
+		.monocle{
+			position: fixed;
+			top: 250px;
+			left: 50px;
+			margin: 0px;
+			
+		}
+		
+		
+		</style>
+	
+<meta charset="UTF-8">
+<title>BOX | Carl's Interviews</title>
+</head>
+
+<body>
+	<div class="carl" align="center">
+		<div class="date"><b>September 3</b></div>
+		<img src="../Assets/Writings/carl1.1-real.jpeg" alt="carlinterview1" class="carlitem">
+		<img src="../Assets/Writings/carl1.2-real.jpeg" alt="carlinterview2" class="carlitem">
+		<img src="../Assets/Writings/carl1.3-real.jpeg" alt="carlinterview3" class="carlitem"> <br/>
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+		
+		<div class="date"><b>September 6</b></div>
+		<img src="../Assets/Writings/carl2.1-real.jpeg" alt="carlinterview1" class="carlitem">
+		<img src="../Assets/Writings/carl2.2-real.jpeg" alt="carlinterview2" class="carlitem">
+		<img src="../Assets/Writings/carl2.3-real.jpeg" alt="carlinterview3" class="carlitem">
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+	</div>
+	
+	<div class="carldet" align="center">
+		<div class="date"><b>September 3</b></div>
+		<img src="../Assets/Writings/carl1.1-det.jpeg" alt="carlinterview1" class="carlitem">
+		<img src="../Assets/Writings/carl1.2-det.jpeg" alt="carlinterview2" class="carlitem">
+		<img src="../Assets/Writings/carl1.3-det.jpeg" alt="carlinterview3" class="carlitem"> <br/>
+	<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+		<div class="date"><b>September 6</b></div>
+		<img src="../Assets/Writings/carl2.1-det.jpeg" alt="carlinterview1" class="carlitem">
+		<img src="../Assets/Writings/carl2.2det.jpeg" alt="carlinterview2" class="carlitem">
+		<img src="../Assets/Writings/carl2.3-det.jpeg" alt="carlinterview3" class="carlitem"> <br/>
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+	</div>
+	
+	<div class="monocle">
+		<div id="offbutton">
+		<img src="../Assets/Pictures/monocleoff.png">
+			</div>
+		<div id="onbutton">
+		<img src="../Assets/Pictures/monocleon.png">
+		</div>
+	
+	</div>
+	 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript">
+
+			
+			$('.carldet').hide();
+$('.monocle').on('click',
+  function() {
+    $('.carl, .carldet').toggle();
+  }
+);
+			$('#offbutton').hide();
+        $('#offbutton, #onbutton').on('click',function(){
+        	$('#offbutton, #onbutton').toggle()
+        });
+        
+        </script>
+
+</body>
+</html>
+

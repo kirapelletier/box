@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+	<style type="text/css">
+		
+	*{
+			background-color: #101010;
+			color: #E5E5E5;
+			font-family: 'Courier';
+			
+		}
+		.diaryitem{
+			width: 80%;
+			height: 100%;
+			position: relative;
+			top: 0px;
+			left: auto;
+			margin: 40px;
+		
+		}
+		
+		.date{
+			font-size: 50px;
+			margin: 40px;
+			
+		}
+		
+		.diary, .diarydet{margin: 40px;}
+		
+		.backbutton{
+			font-size: 30px;
+			padding: 20px;
+			margin: 40px;
+			cursor: pointer;
+			
+		}
+		
+		.monocle{
+			position: fixed;
+			top: 250px;
+			left: 50px;
+			margin: 0px;
+			
+		}
+		
+		
+		</style>
+<meta charset="UTF-8">
+<title>BOX | The Diary</title>
+</head>
+
+<body>
+	<div class="diary" align="center">
+		<div class="date"><b>September 4</b></div>
+		<img src="../Assets/Writings/diary1-real.jpeg" alt="diary1" class="diaryitem">
+		 <br/>
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+		
+		<div class="date"><b>September 9</b></div>
+		<img src="../Assets/Writings/diary2-real.jpeg" alt="diary2" class="diaryitem">
+		<img src="../Assets/Writings/diary3-real.jpeg" alt="diary3" class="diaryitem">
+		 <br/>
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+		
+		<div class="date"><b>October 8</b></div>
+		<button class="backbutton" onClick="document.location = 'password page.html'">This is the letter my father decoded. <br/> Now what was the actual code?</button> <br/>
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+		
+	</div>
+	
+	<div class="diarydet" align="center">
+		<div class="date"><b>September 4</b></div>
+		<img src="../Assets/Writings/diary1-det.jpg" alt="diary1" class="diaryitem"><br/>
+	<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+		
+		<div class="date"><b>September 9</b></div>
+		<img src="../Assets/Writings/diary2-det.jpeg" alt="diary2" class="diaryitem">
+		<img src="../Assets/Writings/diary3-det.jpeg" alt="diary3" class="diaryitem">
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+		
+		<div class="date"><b>October 8</b></div>
+		<button class="backbutton" onClick="document.location = 'password page.html'">This is the letter my father decoded. <br/> Now what was the actual code?</button>
+		<br/>
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+	</div>
+	
+	<div class="monocle">
+		<div id="offbutton">
+		<img src="../Assets/Pictures/monocleoff.png">
+			</div>
+		<div id="onbutton">
+		<img src="../Assets/Pictures/monocleon.png">
+		</div>
+	
+	</div>
+	 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript">
+			
+			$('.diarydet').hide();
+$('.monocle').on('click',
+  function() {
+    $('.diary, .diarydet').toggle();
+  }
+);
+			$('#offbutton').hide();
+        $('#offbutton, #onbutton').on('click',function(){
+        	$('#offbutton, #onbutton').toggle()
+        });
+			
+			
+
+        </script>
+
+</body>
+</html>

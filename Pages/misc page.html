@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BOX | An Interactive Narrative</title>
+	<style type="text/css">
+		*{
+			background-color: #101010;
+			color: #E5E5E5;
+			font-family: 'Courier';
+			
+		}
+		.miscitem{
+			width: 80%;
+			height: 100%;
+			position: relative;
+			top: 0px;
+			left: auto;
+			margin: 40px;
+		
+		}
+		
+		.date{
+			font-size: 50px;
+			margin: 40px;
+			
+		}
+		
+		.misc, .miscdet{margin: 40px;}
+		
+		.backbutton{
+			font-size: 30px;
+			padding: 20px;
+			margin: 40px;
+			cursor: pointer;
+			
+		}
+		
+		.monocle{
+			position: fixed;
+			top: 250px;
+			left: 50px;
+			margin: 0px;
+			
+		}
+	
+
+		
+	
+	</style>
+</head>
+
+<body>
+	<div class="misc" align="center">
+		<div class="date"><b>September 3</b></div>
+		<img src="../Assets/Writings/briefing-real.jpeg" alt="briefing" class="miscitem">
+		<img src="../Assets/Writings/memo-real.jpeg" alt="police memo" class="miscitem"> <br/>
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+		<div class="date"><b>September 6</b></div>
+		<img src="../Assets/Writings/recipe-real.jpeg" alt="recipe" class="carlitem">
+		<img src="../Assets/Writings/graffiti1-real.jpeg" alt="graffiti" class="miscitem"> <br/>
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+		<div class="date"><b>September 12</b></div>
+		<img src="../Assets/Writings/graffiti2-real.jpeg" alt="graffiti2" class="miscitem">
+		<img src="../Assets/Writings/note-real.jpeg" alt="police note" class="miscitem"> <br/>
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+		<br/> <br/> <br/> <br/> <br/>
+		<div class="date"><b>???</b></div>
+		<img src="../Assets/Writings/card-real.jpeg" alt="card" class="miscitem"> <br/>
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+		
+	
+	</div>
+	
+	<div class="miscdet" align="center">
+	<div class="date"><b>September 3</b></div>
+		<img src="../Assets/Writings/briefing-det.jpeg" alt="briefing" class="miscitem">
+		<img src="../Assets/Writings/memo-det.jpg" alt="police memo" class="miscitem"> <br/>
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+		
+		<div class="date"><b>September 6</b></div>
+		<img src="../Assets/Writings/recipe-det.jpeg" alt="recipe" class="carlitem">
+		<img src="../Assets/Writings/graffiti1-det.jpg" alt="graffiti" class="miscitem"> <br/>
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+		
+		<div class="date"><b>September 12</b></div>
+		<img src="../Assets/Writings/graffiti2-det.jpg" alt="graffiti2" class="miscitem">
+		<img src="../Assets/Writings/note-det.jpeg" alt="police note" class="miscitem"> <br>
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+		<br/> <br/> <br/> <br/> <br/>
+		
+		<div class="date"><b>???</b></div>
+		<img src="../Assets/Writings/card-det.jpeg" alt="card" class="miscitem"> <br/>
+		<button class="backbutton" onClick="document.location = 'main game.html'">Back to Box</button>
+	</div>
+	
+	<div class="monocle">
+		<div id="offbutton">
+		<img src="../Assets/Pictures/monocleoff.png">
+			</div>
+		<div id="onbutton">
+		<img src="../Assets/Pictures/monocleon.png">
+		</div>
+	
+	</div>
+	 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript">
+	
+			$('.miscdet').hide();
+$('.monocle').on('click',
+  function() {
+    $('.misc, .miscdet').toggle();
+  }
+);
+			$('#offbutton').hide();
+        $('#offbutton, #onbutton').on('click',function(){
+        	$('#offbutton, #onbutton').toggle()
+        });
+        
+        </script>
+
+</body>
+</html>

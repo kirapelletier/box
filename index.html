@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BOX | An Interactive Narrative</title>
+	<style type="text/css">
+		*{
+			background-color: #101010;
+			color: #E5E5E5;
+		}
+		.article{
+			width: 94%;
+			height: 100%;
+			margin: 40px;
+			
+		}
+		
+		#title, #startbutton, #continuebutton{
+			font-family: "Courier New", "monospace";
+			font-size: 50px;
+			padding: 10px;
+		
+		}
+		
+		.narrator{
+			font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+			font-size: 50px;
+			margin: 40px;
+		}
+		
+		#grown{
+			font-family:'Courier New', 'monospace';
+			font-size: 25px;
+			margin: 60px;
+		}
+		
+		#startbutton:hover, #continuebutton:hover{
+			cursor: pointer;
+		}
+	
+	</style>
+</head>
+
+<body>
+	<div class="news" align="center">
+		<div class="narrator"><i>When I grow up, I wanna be <u>just like</u> my dad! I even have the <u>SAME NAME!!</u></i></div>
+	<img src="../Assets/Writings/newspaper/article1.jpeg" alt="Julia's birth!" class="article">
+		<div class="narrator"><i>There was a bad guy when I was really little, and they called my dad.</i></div>
+	<img src="../Assets/Writings/newspaper/article2.jpeg" alt="Catherine's death :(" class="article">
+		<div class="narrator"><i>And Dad caught him, 'cause he's <u>AWESOME</u>!</i></div>
+	<img src="../Assets/Writings/newspaper/article3.jpeg" alt="Aaron's arrest!" class="article"> <br/> <br/> <br/> <br/> <br/><br/><br/><br/><br/>
+	<img src="../Assets/Writings/newspaper/article4.jpeg" alt="Dad's death." class="article">
+		<div id="grown">Dad was...</div>
+		</div>
+	<br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/><br/><br/><br/><br/><br/><br/><br/><br/> <br/> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<div id="title" align="center"> BOX: An Interactive Narrative <br/><br/>
+		<button id="startbutton" onClick="document.location = 'game intro.html'">Start</button>
+		<button id="continuebutton" onClick="document.location = 'main game.html'">Continue</button>
+	</div>
+	 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            
+            $(function() {
+                
+                var documentEl = $(document),
+                    fadeElem = $('.article');
+                
+                
+                documentEl.on('scroll', function() {
+                    var currScrollPos = documentEl.scrollTop();
+                    
+                    fadeElem.each(function() {
+                        var $this = $(this),
+                            elemOffsetTop = $this.offset().top;
+                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/1500);
+                    }); 
+                });
+                
+            });
+        
+        </script>
+
+</body>
+</html>
